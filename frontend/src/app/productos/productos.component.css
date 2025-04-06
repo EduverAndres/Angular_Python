@@ -1,0 +1,119 @@
+/* Fondo dinámico gamer */
+body {
+  background: linear-gradient(145deg, #0f0f0f, #1c1c1c); /* Fondo oscuro degradado */
+  color: #f5f5f5; /* Texto claro para contraste */
+  font-family: 'Rajdhani', sans-serif; /* Fuente estilo gamer */
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed; /* Fijo al hacer scroll */
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Título */
+h2 {
+  color: #00ffcc; /* Verde cian estilo gamer */
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px #00ffcc, 0 0 16px #00ffcc; /* Brillo suave */
+}
+
+/* Formulario */
+form {
+  background: linear-gradient(145deg, #181818, #252525); /* Fondo degradado */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(80, 78, 78, 0.6); /* Sombras elegantes */
+  color: #ffffff; /* Texto claro para contraste */
+
+}
+
+form input {
+  background-color: #1d1d1d;
+  border: 2px solid #2e2e2e;
+  color: #ffffff; /* Texto claro */
+  border-radius: 5px;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+  border-color: #00ffcc; /* Neón al hacer foco */
+  box-shadow: 0 0 10px #00ffcc;
+  outline: none;
+  color: #ffffff; /* Texto claro para contraste */
+
+}
+
+form button {
+  background-color: #00ff80; /* Verde neón */
+  color: #000000; /* Texto negro para contraste */
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00ffcc; /* Cambio a cian neón */
+  transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Lista de productos */
+.list-group-item {
+  background: linear-gradient(145deg, #1e1e1e, #242424); /* Fondo degradado oscuro */
+  border: 2px solid #2e2e2e;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 15px rgba(109, 107, 107, 0.5); /* Sombras elegantes */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  color: #ffffff; /* Texto claro para contraste */
+}
+
+.list-group-item:hover {
+  transform: translateY(-3px); /* Flotar suavemente */
+  box-shadow: 0 0 15px #00ffcc; /* Efecto gamer */
+}
+
+/* Botón eliminar */
+button.btn-danger {
+  background-color: #ff004d; /* Rojo oscuro */
+  color: #ffffff; /* Texto blanco */
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.btn-danger:hover {
+  background-color: #ff1f70; /* Rojo brillante */
+  transform: scale(1.1); /* Aumenta ligeramente */
+  box-shadow: 0 0 10px #ff004d;
+}
+
+::placeholder {
+  color: #00ffcc; /* Color cian gamer */
+  font-style: italic; /* Estilo dinámico */
+  opacity: 0.8; /* Ligera transparencia */
+}
+
+input:focus::placeholder {
+  color: #00ff80; /* Cambia al verde neón al enfocar */
+  font-weight: bold; /* Aumenta su presencia */
+}

@@ -1,0 +1,71 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">Gestión de Productos</h2>
+  <div class="row">
+    <!-- Formulario: 30% de ancho -->
+    <div class="col-md-4">
+      <form (ngSubmit)="agregarProducto()" class="mb-4">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre del Producto:</label>
+          <input
+            id="nombre"
+            type="text"
+            [(ngModel)]="producto.nombre"
+            name="nombre"
+            required
+            class="form-control"
+            placeholder="¿Qué épico objeto añadirás hoy?">
+        </div>
+
+        <div class="mb-3">
+          <label for="precio" class="form-label">Precio:</label>
+          <input
+            id="precio"
+            type="number"
+            [(ngModel)]="producto.precio"
+            name="precio"
+            required
+            class="form-control"
+            placeholder="Define el valor de este tesoro"
+            style="color: white;">
+        </div>
+
+        <div class="mb-3">
+          <label for="cantidad" class="form-label">Cantidad:</label>
+          <input
+            id="cantidad"
+            type="number"
+            [(ngModel)]="producto.cantidad"
+            name="cantidad"
+            required
+            class="form-control"
+            placeholder="¿Cuántos de estos quieres en tu inventario?">
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Agregar Producto</button>
+      </form>
+
+    </div>
+
+    <!-- Lista de productos: 70% de ancho -->
+    <div class="col-md-8">
+      <div class="row">
+        <div *ngFor="let producto of productos" class="col-md-6 mb-4">
+          <div class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="me-3">
+                <span class="fw-bold">{{ producto.nombre }}</span>
+                <span>- ${{ producto.precio }}</span>
+                <span>- Cantidad: {{ producto.cantidad }}</span>
+              </div>
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="eliminarProducto(producto.id)">
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

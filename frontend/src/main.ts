@@ -1,6 +1,17 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
+import { ProductosComponent } from './app/productos/productos.component';
+import { provideRouter, Routes } from '@angular/router';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+const routes: Routes = [
+  { path: '', component: ProductosComponent }, // Ruta base.
+  { path: 'productos', component: ProductosComponent }, // Ruta explícita para 'productos'.
+];
+
+bootstrapApplication(ProductosComponent, {
+  providers: [
+    provideRouter(routes),
+    provideHttpClient() // Registrar HttpClientModule como proveedor.
+  ],
+});
